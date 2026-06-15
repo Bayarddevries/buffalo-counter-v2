@@ -72,14 +72,14 @@
       "label": "The Great Collapse Begins",
       "populationLabel": "At risk",
       "status": "warning",
-      "text": "The population crashed from millions to hundreds of thousands in just a few years. Métis communities faced starvation as the buffalo economy vanished [4]. In 1874, the U.S. Army openly championed killing buffalo to force Indigenous nations onto reservations. Gen. Philip Sheridan told Congress: \"Let them kill, skin, and sell until the buffalo are exterminated\" [3].",
+      "text": "The population crashed from millions to hundreds of thousands in just a few years. Métis communities faced starvation as the buffalo economy vanished [4]. In 1874, the U.S. Army openly championed killing buffalo to force Indigenous nations onto reservations. Gen. Philip Sheridan told Congress: \\\"Let them kill, skin, and sell until the buffalo are exterminated\\\" [3].",
       "citations": [
         { "id": 4, "source": "Calloway, Colin. (1996). Our Hearts Fell to the Ground. Bedford/St. Martin's." },
         { "id": 3, "source": "Isenberg, Andrew C. (2000). The Destruction of the Bison. Cambridge University Press." }
       ],
-      "image": "the-herd-drawing-1860-1913-aab.jpg",
-      "alt": "The Herd drawing from 1860/1913 showing vast buffalo herds",
-      "caption": "\"The Herd\" drawing, 1860/1913. Context for the scale of slaughter that followed. (AAB)",
+      "image": "bisonhides.jpg",
+      "alt": "Rath & Wright's buffalo hide yard in 1878, showing 40,000 buffalo hides, Dodge City, Kansas",
+      "caption": "Rath & Wright's buffalo hide yard, 1878, 40,000 buffalo hides, Dodge City, Kansas. The epicenter of the 1870s commercial slaughter. (Unknown photographer, public domain)",
       "atmosphericBg": "Book-Picture-1.jpg"
     },
     {
