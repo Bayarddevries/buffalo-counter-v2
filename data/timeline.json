@@ -11,7 +11,7 @@
       "label": "A Vast Ocean of Buffalo",
       "populationLabel": "Population stable",
       "status": "stable",
-      "text": "Tens of millions of buffalo covered the plains from Alberta to Texas. For the Métis, the buffalo was everything: food, clothing, shelter, trade goods. The hunt was communal, organized, and sustainable. It had been that way for generations.",
+      "text": "Tens of millions of buffalo covered the plains from Alberta to Texas [1]. For the Métis, the buffalo was everything: food, clothing, shelter, trade goods. The hunt was communal, organized, and sustainable. It had been that way for generations [2].",
       "citations": [
         { "id": 1, "source": "Flores, Dan. (2016). American Serengeti. University of Oklahoma Press." },
         { "id": 2, "source": "Peterson, Jacqueline. (1985). Many Roads to Red River. Gabriel Dumont Institute." }
@@ -27,7 +27,7 @@
       "label": "The Fur Trade Intensifies",
       "populationLabel": "Population declining",
       "status": "declining",
-      "text": "The Hudson's Bay Company and North West Company competed for control of the plains. Métis freighters and hunters became the backbone of the trade. Pemmican — dried buffalo meat mixed with fat — fed the fur trade. The buffalo economy was booming, but the pressure was building.",
+      "text": "The Hudson's Bay Company and North West Company competed for control of the plains. Métis freighters and hunters became the backbone of the trade. Pemmican — dried buffalo meat mixed with fat — fed the fur trade. The buffalo economy was booming, but the pressure was building [3].",
       "citations": [
         { "id": 3, "source": "Isenberg, Andrew C. (2000). The Destruction of the Bison. Cambridge University Press." }
       ],
@@ -42,7 +42,7 @@
       "label": "The Hide Trade Takes Off",
       "populationLabel": "Population declining",
       "status": "declining",
-      "text": "Commercial hunting for buffalo robes expanded east. For every robe that made it to market, several more buffalo were killed and left in the sun. The trade obscured the true death toll. By the 1870s, the robe trade peaked at 250,000 per year.",
+      "text": "Commercial hunting for buffalo robes expanded east. For every robe that made it to market, several more buffalo were killed and left in the sun [3]. The trade obscured the true death toll. By the 1870s, the robe trade peaked at 250,000 per year [3].",
       "citations": [
         { "id": 3, "source": "Isenberg, Andrew C. (2000). The Destruction of the Bison. Cambridge University Press." }
       ],
@@ -57,7 +57,7 @@
       "label": "Railroads Reach the Plains",
       "populationLabel": "Population declining rapidly",
       "status": "warning",
-      "text": "Railroads made mass slaughter possible. Hunters fired from train windows, leaving carcasses to rot. The bone trade shipped tons of remains east for fertilizer and sugar refining. The AT&SF depot at Dodge City shipped 200,000 hides per year.",
+      "text": "Railroads made mass slaughter possible. Hunters fired from train windows, leaving carcasses to rot [3]. The bone trade shipped tons of remains east for fertilizer and sugar refining [3]. The AT&SF depot at Dodge City shipped 200,000 hides per year [3].",
       "citations": [
         { "id": 3, "source": "Isenberg, Andrew C. (2000). The Destruction of the Bison. Cambridge University Press." }
       ],
@@ -72,7 +72,7 @@
       "label": "The Great Collapse Begins",
       "populationLabel": "At risk",
       "status": "warning",
-      "text": "The population crashed from millions to hundreds of thousands in just a few years. Métis communities faced starvation as the buffalo economy vanished. In 1874, the U.S. Army openly championed killing buffalo to force Indigenous nations onto reservations. Gen. Philip Sheridan told Congress: \"Let them kill, skin, and sell until the buffalo are exterminated.\"",
+      "text": "The population crashed from millions to hundreds of thousands in just a few years. Métis communities faced starvation as the buffalo economy vanished [4]. In 1874, the U.S. Army openly championed killing buffalo to force Indigenous nations onto reservations. Gen. Philip Sheridan told Congress: \"Let them kill, skin, and sell until the buffalo are exterminated\" [3].",
       "citations": [
         { "id": 4, "source": "Calloway, Colin. (1996). Our Hearts Fell to the Ground. Bedford/St. Martin's." },
         { "id": 3, "source": "Isenberg, Andrew C. (2000). The Destruction of the Bison. Cambridge University Press." }
@@ -88,7 +88,7 @@
       "label": "Peak Slaughter: 1871–1874",
       "populationLabel": "Near extinction",
       "status": "critical",
-      "text": "Between 1871 and 1874, close to three million buffalo were slaughtered in Kansas alone. The new tanning process (1871) turned hides into industrial belting for machinery. The I.G. Baker Company at Fort MacLeod marketed 250,000 hides in 1874. Sheridan testified to Congress advocating extermination as policy.",
+      "text": "Between 1871 and 1874, close to three million buffalo were slaughtered in Kansas alone [5]. The new tanning process (1871) turned hides into industrial belting for machinery [7]. The I.G. Baker Company at Fort MacLeod marketed 250,000 hides in 1874 [5]. Sheridan testified to Congress advocating extermination as policy [6].",
       "citations": [
         { "id": 5, "source": "MacEwan, Grant. (1995). Buffalo: Sacred and Sacrificed. Edmonton." },
         { "id": 3, "source": "Isenberg, Andrew C. (2000). The Destruction of the Bison. Cambridge University Press." },
@@ -105,7 +105,7 @@
       "label": "The Hide Trade Collapses",
       "populationLabel": "Near extinction",
       "status": "critical",
-      "text": "The southern herd was destroyed in the early 1870s. By 1877, I.G. Baker Co. marketed only 30,000 hides — down from 250,000 just three years prior. The northern herd disappeared between 1876 and 1883. Treaty 7 was signed September 22, 1877; Elders recall the last buffalo vanished shortly after.",
+      "text": "The southern herd was destroyed in the early 1870s [4]. By 1877, I.G. Baker Co. marketed only 30,000 hides — down from 250,000 just three years prior [5]. The northern herd disappeared between 1876 and 1883 [4]. Treaty 7 was signed September 22, 1877; Elders recall the last buffalo vanished shortly after [4].",
       "citations": [
         { "id": 5, "source": "MacEwan, Grant. (1995). Buffalo: Sacred and Sacrificed. Edmonton." },
         { "id": 4, "source": "Calloway, Colin. (1996). Our Hearts Fell to the Ground. Bedford/St. Martin's." }
@@ -121,7 +121,7 @@
       "label": "Picking the Bones Clean",
       "populationLabel": "Near extinction",
       "status": "critical",
-      "text": "With the herds gone, a new industry rose: bone picking. Settlers and Indigenous people gathered bleached skeletons from the prairie. The CPR shipped boxcars full of bones east to Regina (the \"Pile of Bones\"), Moose Jaw, and Medicine Hat. Bones became fertilizer, bone char, and buttons. Nothing was wasted except the buffalo itself.",
+      "text": "With the herds gone, a new industry rose: bone picking [3]. Settlers and Indigenous people gathered bleached skeletons from the prairie. The CPR shipped boxcars full of bones east to Regina (the \"Pile of Bones\"), Moose Jaw, and Medicine Hat [5]. Bones became fertilizer, bone char, and buttons. Nothing was wasted except the buffalo itself [3].",
       "citations": [
         { "id": 3, "source": "Isenberg, Andrew C. (2000). The Destruction of the Bison. Cambridge University Press." },
         { "id": 5, "source": "MacEwan, Grant. (1995). Buffalo: Sacred and Sacrificed. Edmonton." }
@@ -137,7 +137,7 @@
       "label": "The Northern Herd Vanishes",
       "populationLabel": "Near extinction",
       "status": "critical",
-      "text": "The northern herd disappeared between 1876 and 1883. Peak years for the buffalo bone trade were 1891–1892, when train freight cars in constant use could not keep up with demand. Hundreds of thousands of skeletons piled up along railway tracks awaiting shipment.",
+      "text": "The northern herd disappeared between 1876 and 1883 [4]. Peak years for the buffalo bone trade were 1891–1892, when train freight cars in constant use could not keep up with demand [5]. Hundreds of thousands of skeletons piled up along railway tracks awaiting shipment [5].",
       "citations": [
         { "id": 4, "source": "Calloway, Colin. (1996). Our Hearts Fell to the Ground. Bedford/St. Martin's." },
         { "id": 5, "source": "MacEwan, Grant. (1995). Buffalo: Sacred and Sacrificed. Edmonton." }
@@ -153,7 +153,7 @@
       "label": "The Last of the Herds",
       "populationLabel": "Functionally extinct",
       "status": "extinct",
-      "text": "William Temple Hornaday's 1889 Smithsonian report documented the final toll: fewer than 1,000 buffalo remained in the wild. The species was functionally extinct. The Métis homeland was shattered. The plains were silent.",
+      "text": "William Temple Hornaday's 1889 Smithsonian report documented the final toll: fewer than 1,000 buffalo remained in the wild [6]. The species was functionally extinct. The Métis homeland was shattered. The plains were silent [4].",
       "citations": [
         { "id": 6, "source": "Hornaday, William Temple. (1889). The Extermination of the American Bison. Smithsonian Institution Annual Report." },
         { "id": 4, "source": "Calloway, Colin. (1996). Our Hearts Fell to the Ground. Bedford/St. Martin's." }
@@ -169,7 +169,7 @@
       "label": "Functionally Extinct",
       "populationLabel": "Functionally extinct",
       "status": "extinct",
-      "text": "By 1900, roughly 500 buffalo remained, scattered in private herds and a small wild population in Yellowstone. In a single lifetime, the most abundant large mammal in North America had been reduced to nearly nothing. The Métis lost their economy, their food sovereignty, and the foundation of their way of life. The plains were opened for settlement. The destruction was the point.",
+      "text": "By 1900, roughly 500 buffalo remained, scattered in private herds and a small wild population in Yellowstone [6]. In a single lifetime, the most abundant large mammal in North America had been reduced to nearly nothing. The Métis lost their economy, their food sovereignty, and the foundation of their way of life [4]. The plains were opened for settlement. The destruction was the point [3].",
       "citations": [
         { "id": 6, "source": "Hornaday, William Temple. (1889). The Extermination of the American Bison. Smithsonian." },
         { "id": 4, "source": "Calloway, Colin. (1996). Our Hearts Fell to the Ground. Bedford/St. Martin's." },
