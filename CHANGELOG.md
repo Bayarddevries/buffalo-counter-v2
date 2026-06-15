@@ -20,6 +20,9 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 
 ## [2026-06-15] — Initial Deploy
 
+### Fixed (2026-06-15)
+- **Issue #1**: Atmospheric backgrounds now visible — `.card.active` background changed to `rgba(26,26,26,0.85)` so fixed atmospheric layer shows through
+
 ### Added
 - Scroll-driven narrative with 14 events (1800–1900)
 - Animated population counter with smooth interpolation
