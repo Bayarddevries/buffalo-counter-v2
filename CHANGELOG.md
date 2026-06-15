@@ -23,6 +23,7 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 ### Fixed (2026-06-15)
 - **Issue #1**: Atmospheric backgrounds now visible — `.card.active` background changed to `rgba(26,26,26,0.85)` so fixed atmospheric layer shows through
 - **Issue #2**: Desktop scroll snap reliable — changed `.cards-section` to `scroll-snap-type: y mandatory` (removed mobile-only override)
+- **Issue #3**: 1870 card image replaced — now shows Rath & Wright's Dodge City hide yard (1878, 40,000 hides) instead of vast herd drawing, matching the 5.5M population narrative
 
 ### Added
 - Scroll-driven narrative with 14 events (1800–1900)
