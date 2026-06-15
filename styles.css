@@ -359,6 +359,10 @@ body {
     background: transparent;
 }
 
+.card.active {
+    background: rgba(26, 26, 26, 0.85);
+}
+
 @media (max-width: 767px) {
 
 .card {
