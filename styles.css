@@ -363,19 +363,17 @@ body {
     background: rgba(26, 26, 26, 0.85);
 }
 
-@media (max-width: 767px) {
-
+/* ===================================
+   Card base styles (all viewports)
+   =================================== */
 .card {
-    padding: 2rem 1rem;
-    opacity: 0.35;
-    transform: scale(0.97);
-    transition: opacity 0.4s ease, transform 0.4s ease, background 0.4s ease;
-}
-
-.card.active {
-    opacity: 1;
-    transform: scale(1);
-    background: rgba(26, 26, 26, 0.85);
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: transparent;
 }
 
 .card.card-end {
@@ -501,6 +499,37 @@ body {
 
 .card-end .card-year {
     color: var(--color-danger-dark);
+}
+
+@media (max-width: 767px) {
+
+.card {
+    padding: 2rem 1rem;
+    opacity: 0.35;
+    transform: scale(0.97);
+    transition: opacity 0.4s ease, transform 0.4s ease, background 0.4s ease;
+}
+
+.card.active {
+    opacity: 1;
+    transform: scale(1);
+    background: rgba(26, 26, 26, 0.85);
+}
+
+.card.card-end {
+    padding-bottom: 30vh;
+}
+
+.card-buffer {
+    scroll-snap-align: none;
+    scroll-snap-stop: normal;
+    min-height: 80vh;
+    opacity: 0;
+    pointer-events: none;
+    transform: none;
+    background: transparent;
+    padding: 0;
+    margin: 0;
 }
 
 /* ===================================
