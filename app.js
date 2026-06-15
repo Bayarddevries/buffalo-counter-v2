@@ -17,7 +17,8 @@
         cards: null,
         section: null,
         atmoBg: null,
-        timelineData: null
+        timelineData: null,
+        imageManifest: null
     };
     
     const MIN_YEAR = 1800;
@@ -64,6 +65,41 @@
         const response = await fetch('data/timeline.json');
         if (!response.ok) throw new Error(`Failed to load timeline: ${response.status}`);
         return response.json();
+    }
+
+    // ===================================
+    // Image Manifest Helpers
+    // ===================================
+    function getImageMeta(filename) {
+        if (!state.imageManifest) return null;
+        return state.imageManifest.get(filename) || null;
+    }
+
+    function buildImageCredit(filename) {
+        const meta = getImageMeta(filename);
+        if (!meta) return '';
+        
+        const parts = [];
+        if (meta.credit) parts.push(`<span class="img-credit">Credit: ${escapeHtml(meta.credit)}</span>`);
+        if (meta.license) parts.push(`<span class="img-license">${escapeHtml(meta.license)}</span>`);
+        if (meta.source_url) parts.push(`<a class="img-source" href="${escapeHtml(meta.source_url)}" target="_blank" rel="noopener noreferrer">View source</a>`);
+        
+        if (parts.length === 0) return '';
+        return `<div class="img-meta">${parts.join(' · ')}</div>`;
+    }
+
+    // ===================================
+    // Load Image Manifest
+    // ===================================
+    async function loadImageManifest() {
+        const response = await fetch('data/images.json');
+        if (!response.ok) throw new Error(`Failed to load image manifest: ${response.status}`);
+        const data = await response.json();
+        const manifest = new Map();
+        data.images.forEach(img => {
+            manifest.set(img.file, img);
+        });
+        return manifest;
     }
     
     // ===================================
@@ -262,28 +298,30 @@
         card.dataset.year = event.year;
         card.dataset.pop = event.population;
         if (event.atmosphericBg) card.dataset.bg = `images/${event.atmosphericBg}`;
-        
+
+        const mainCredit = buildImageCredit(event.image);
         let html = `
             <div class="card-inner">
                 <div class="card-year">${event.year}</div>
                 <h2 class="card-title">${escapeHtml(event.label)}</h2>
                 <figure class="card-image">
                     <img src="images/${event.image}" alt="${escapeHtml(event.alt)}" loading="${index === 0 ? 'eager' : 'lazy'}">
-                    <figcaption>${escapeHtml(event.caption)}</figcaption>
+                    <figcaption>${escapeHtml(event.caption)}${mainCredit}</figcaption>
                 </figure>
                 <p class="card-text">${injectCitations(event.text, event.citations)}</p>
         `;
-        
+
         if (isLast && event.finalImage) {
+            const finalCredit = buildImageCredit(event.finalImage);
             html += `
                 <p class="card-text" style="margin-top: 1rem;">${escapeHtml(event.closingText || '')}</p>
                 <figure class="card-image-final">
                     <img src="images/${event.finalImage}" alt="${escapeHtml(event.finalAlt)}" loading="lazy">
-                    <figcaption>${escapeHtml(event.finalCaption)}</figcaption>
+                    <figcaption>${escapeHtml(event.finalCaption)}${finalCredit}</figcaption>
                 </figure>
             `;
         }
-        
+
         html += '</div>';
         card.innerHTML = html;
         return card;
@@ -405,7 +443,7 @@
         const splash = document.getElementById('splash');
         const btn = document.getElementById('splashEnter');
         if (!splash || !btn) return;
-        
+
         btn.addEventListener('click', () => {
             splash.classList.add('hidden');
             splash.addEventListener('transitionend', () => {
@@ -413,6 +451,17 @@
             }, { once: true });
             setTimeout(() => { if (splash.parentNode) splash.remove(); }, 600);
         });
+    }
+
+    function enhanceSplashImage() {
+        const splashFigcaption = document.querySelector('.splash-image figcaption');
+        if (!splashFigcaption) return;
+        
+        // Splash uses bisonhides.jpg
+        const credit = buildImageCredit('bisonhides.jpg');
+        if (credit) {
+            splashFigcaption.innerHTML = splashFigcaption.textContent + credit;
+        }
     }
     
     // ===================================
@@ -537,17 +586,22 @@
     // ===================================
     async function bootstrap() {
         try {
-            const timeline = await loadTimeline();
+            const [timeline, imageManifest] = await Promise.all([
+                loadTimeline(),
+                loadImageManifest()
+            ]);
             state.timelineData = timeline;
-            
+            state.imageManifest = imageManifest;
+
             setupTimelineLabels(timeline);
             renderCards(timeline);
             setupSplash();
+            enhanceSplashImage();
             setupSources(timeline);
             setupCitationToast();
             setupScroll();
             setupKeyboard();
-            
+
             // Initial state
             const firstEvent = timeline.events[0];
             if (firstEvent) {
@@ -557,13 +611,13 @@
                 if ($year) $year.textContent = firstEvent.year;
                 if ($pop) $pop.textContent = formatNumber(firstEvent.population);
                 if ($status) $status.textContent = firstEvent.populationLabel;
-                
+
                 state.currentYear = firstEvent.year;
                 state.currentPop = firstEvent.population;
-                
+
                 updateTimeline(firstEvent.year);
             }
-            
+
             console.log('Buffalo Counter initialized successfully');
         } catch (err) {
             console.error('Failed to initialize:', err);

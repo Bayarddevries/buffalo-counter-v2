@@ -432,6 +432,38 @@ body {
     font-style: italic;
 }
 
+.card-image-final figcaption {
+    font-size: 0.78rem;
+    color: var(--color-text-muted);
+    margin-top: 0.4rem;
+    font-style: italic;
+}
+
+.img-meta {
+    margin-top: 0.35rem;
+    font-size: 0.7rem;
+    color: var(--color-text-muted);
+    line-height: 1.5;
+}
+
+.img-credit {
+    font-style: normal;
+}
+
+.img-license {
+    font-style: normal;
+}
+
+.img-source {
+    color: var(--color-accent);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.img-source:hover {
+    text-decoration: underline;
+}
+
 .card-image-final {
     margin: 1.25rem 0 0;
     border-radius: var(--radius-lg);
@@ -444,13 +476,6 @@ body {
     height: auto;
     display: block;
     border-radius: var(--radius-lg);
-}
-
-.card-image-final figcaption {
-    font-size: 0.78rem;
-    color: var(--color-text-muted);
-    margin-top: 0.4rem;
-    font-style: italic;
 }
 
 .card-text {
