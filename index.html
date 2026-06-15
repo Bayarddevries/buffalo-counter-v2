@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A visualization of the Great Buffalo Collapse, 1800-1900. Scroll to watch the buffalo population disappear.">
+    <title>The Vanishing Buffalo — Scroll Edition</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital,wght@0,400;1,400&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Atmospheric Background (full-bleed, fixed, behind content) -->
+    <div class="atmo-bg" id="atmoBg" aria-hidden="true"></div>
+    <div class="atmo-overlay" aria-hidden="true"></div>
+
+    <!-- Splash Overlay -->
+    <div class="splash" id="splash" role="dialog" aria-modal="true" aria-label="Introduction">
+        <div class="splash-inner">
+            <h1 class="splash-title">The Vanishing Buffalo</h1>
+            <p class="splash-subtitle">A visualization of the Great Buffalo Collapse, 1800–1900</p>
+
+            <figure class="splash-image">
+                <img src="images/bisonhides.jpg" alt="Rath &amp; Wright's buffalo hide yard in 1878, showing 40,000 buffalo hides, Dodge City, Kansas" loading="eager">
+                <figcaption>Rath &amp; Wright's buffalo hide yard, 1878, 40,000 buffalo hides, Dodge City, Kansas.</figcaption>
+            </figure>
+
+            <div class="splash-text">
+                <p>
+                    <strong>In 1800, an estimated 30 million buffalo</strong> roamed the North American plains.
+                    By 1900, fewer than <strong>500 remained</strong>.
+                </p>
+                <p>
+                    This collapse was not natural. Commercial hunting, military campaigns, and government policy
+                    destroyed the foundation of Plains Indigenous life on purpose.
+                </p>
+                <p>
+                    The Métis, who depended on buffalo for food, clothing, and trade, saw their world
+                    disappear in a single lifetime.
+                </p>
+                <p>
+                    <em>Scroll to witness the collapse. Click citation numbers [n] for full sources.</em>
+                </p>
+            </div>
+
+            <button class="splash-enter" id="splashEnter" type="button">
+                Begin
+            </button>
+        </div>
+    </div>
+
+    <!-- Sticky Counter -->
+    <div class="counter-sticky" id="counterFixed" aria-label="Buffalo population counter">
+        <div class="counter-sticky-inner">
+            <div class="counter-year" id="counterYear" aria-live="polite">1800</div>
+            <div class="counter-value" id="counterValue" aria-live="polite">30,000,000</div>
+            <div class="counter-label" id="counterStatus" aria-live="polite">Population stable</div>
+        </div>
+        <!-- Timeline inside sticky header so it stays visible on mobile -->
+        <div class="timeline-wrap">
+            <div class="timeline-track">
+                <div class="timeline-fill" id="timelineFill" style="width: 0%; background: var(--color-pop-green);"></div>
+            </div>
+            <div class="timeline-labels" id="timelineLabels">
+                <!-- Labels injected by JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll Prompt -->
+    <div class="scroll-prompt" id="scrollPrompt" aria-hidden="true">
+        <span class="arrow">↓</span>
+        Scroll to explore
+    </div>
+
+    <!-- Cards (scroll-snap) -->
+    <div class="cards-section" id="cardsSection">
+        <!-- Cards injected by JS from timeline.json -->
+    </div>
+
+    <!-- Sources Collapsible -->
+    <div class="sources-bar" id="sourcesBar">
+        <button class="sources-toggle" id="sourcesToggle" aria-expanded="false" aria-controls="sourcesPanel">
+            <span class="sources-toggle-icon">▲</span>
+            <span>Sources &amp; References</span>
+        </button>
+        <div class="sources-panel" id="sourcesPanel" role="region" aria-label="Sources and references" hidden>
+            <!-- Sources injected by JS -->
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
