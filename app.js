@@ -147,26 +147,64 @@
         }
     }
     
+    // ===================================
+    // Timeline Labels - Major years only + tick marks
+    // ===================================
     function setupTimelineLabels(timelineData) {
         const $labels = document.getElementById('timelineLabels');
         if (!$labels) return;
+
+        // Major labeled years
+        const MAJOR_YEARS = [1800, 1850, 1900];
         
-        const years = timelineData.events.map(e => e.year);
-        if (!years.includes(MIN_YEAR)) years.unshift(MIN_YEAR);
-        if (!years.includes(MAX_YEAR)) years.push(MAX_YEAR);
-        years.sort((a, b) => a - b);
+        // All event years for tick marks
+        const eventYears = timelineData.events.map(e => e.year);
+        if (!eventYears.includes(MIN_YEAR)) eventYears.unshift(MIN_YEAR);
+        if (!eventYears.includes(MAX_YEAR)) eventYears.push(MAX_YEAR);
+        eventYears.sort((a, b) => a - b);
+
+        // Build: major labels + all tick marks
+        let html = '';
         
-        $labels.innerHTML = years.map(year => {
+        // Major year labels (with text)
+        MAJOR_YEARS.forEach(year => {
             const percent = ((year - MIN_YEAR) / YEAR_RANGE) * 100;
-            return `<span style="left: ${percent}%">${year}</span>`;
-        }).join('');
+            html += `<span class="timeline-label-major" style="left: ${percent}%">${year}</span>`;
+        });
         
+        // Minor tick marks (all event years, no text)
+        eventYears.forEach(year => {
+            if (MAJOR_YEARS.includes(year)) return;
+            const percent = ((year - MIN_YEAR) / YEAR_RANGE) * 100;
+            html += `<span class="timeline-tick" style="left: ${percent}%" title="${year}"></span>`;
+        });
+        
+        $labels.innerHTML = html;
+
+        // Style
         $labels.style.position = 'relative';
         $labels.style.display = 'flex';
-        $labels.querySelectorAll('span').forEach(span => {
+        $labels.style.height = '24px';
+        
+        $labels.querySelectorAll('.timeline-label-major').forEach(span => {
             span.style.position = 'absolute';
             span.style.transform = 'translateX(-50%)';
             span.style.whiteSpace = 'nowrap';
+            span.style.fontFamily = 'var(--font-body)';
+            span.style.fontSize = '0.7rem';
+            span.style.color = 'var(--color-text-muted)';
+            span.style.top = '8px';
+            span.style.pointerEvents = 'none';
+        });
+        
+        $labels.querySelectorAll('.timeline-tick').forEach(span => {
+            span.style.position = 'absolute';
+            span.style.transform = 'translateX(-50%)';
+            span.style.width = '1px';
+            span.style.height = '10px';
+            span.style.background = 'var(--color-border)';
+            span.style.top = '0';
+            span.style.pointerEvents = 'none';
         });
     }
     
