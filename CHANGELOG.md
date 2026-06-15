@@ -26,6 +26,7 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 - **Issue #3**: 1870 card image replaced — now shows Rath & Wright's Dodge City hide yard (1878, 40,000 hides) instead of vast herd drawing, matching the 5.5M population narrative
 - **Issue #4**: 1874 card image replaced — now shows 1874 Taylor County buffalo hunt (peak slaughter year) instead of ledger, matching industrial-scale narrative
 - **Issue #5**: 1874 card copy rewritten — visceral narrative: 3M killed in 4 years, carcasses along railroads, buffalo died for machine belts, Sheridan's extermination policy, Métis world vanishing in one winter
+- **Issue #6**: All images now display credit, license, and "View source" link — loads `data/images.json` manifest, injects into card figcaptions and splash image
 
 ### Added
 - Scroll-driven narrative with 14 events (1800–1900)
