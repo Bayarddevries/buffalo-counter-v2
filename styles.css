@@ -337,7 +337,7 @@ body {
    Cards Section — scroll snap
    =================================== */
 .cards-section {
-    scroll-snap-type: y proximity;
+    scroll-snap-type: y mandatory;
     overflow-y: auto;
     height: 100vh;
     scroll-behavior: auto;
@@ -347,10 +347,6 @@ body {
 }
 
 @media (max-width: 767px) {
-    .cards-section {
-        scroll-snap-type: y mandatory;
-    }
-}
 
 .card {
     scroll-snap-align: start;
