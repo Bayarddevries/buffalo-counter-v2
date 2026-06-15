@@ -346,8 +346,9 @@ body {
     box-sizing: border-box;
 }
 
-@media (max-width: 767px) {
-
+/* ===================================
+   Card base styles (all viewports)
+   =================================== */
 .card {
     scroll-snap-align: start;
     scroll-snap-stop: always;
@@ -355,11 +356,16 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    background: transparent;
+}
+
+@media (max-width: 767px) {
+
+.card {
     padding: 2rem 1rem;
     opacity: 0.35;
     transform: scale(0.97);
     transition: opacity 0.4s ease, transform 0.4s ease, background 0.4s ease;
-    background: transparent;
 }
 
 .card.active {
