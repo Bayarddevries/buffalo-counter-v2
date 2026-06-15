@@ -94,10 +94,10 @@
         { "id": 3, "source": "Isenberg, Andrew C. (2000). The Destruction of the Bison. Cambridge University Press." },
         { "id": 6, "source": "U.S. Congress. (1874). Congressional Globe, 43rd Congress. Sheridan testimony." }
       ],
-      "image": "buffalo-hunt-taylor-county-1874.webp",
+      "image": "buffalo-hunt-taylor-county-1874.jpg",
       "alt": "Buffalo hunt in Taylor County, 1874, from historical publication",
       "caption": "Buffalo Hunt in Taylor County, 1874 — peak slaughter year. Hunters working at industrial scale. (Historical publication, public domain)",
-      "atmosphericBg": "Bison_skull_pile_edit_2.jpg"
+      "atmosphericBg": "Bison_skull_pile_edit_2.webp"
     },
     {
       "year": 1877,
@@ -113,7 +113,7 @@
       "image": "8-man-buffalo-hunt-skinning-carcass.jpg",
       "alt": "Eight-man buffalo hunt skinning a carcass, 1870s",
       "caption": "Buffalo hunt party skinning carcasses. LCCN 2006688689.",
-      "atmosphericBg": "Bison_skull_pile_edit_2.jpg"
+      "atmosphericBg": "Bison_skull_pile_edit_2.webp"
     },
     {
       "year": 1880,
@@ -121,15 +121,15 @@
       "label": "Picking the Bones Clean",
       "populationLabel": "Near extinction",
       "status": "critical",
-      "text": "With the herds gone, a new industry rose: bone picking [3]. Settlers and Indigenous people gathered bleached skeletons from the prairie. The CPR shipped boxcars full of bones east to Regina (the \"Pile of Bones\"), Moose Jaw, and Medicine Hat [5]. Bones became fertilizer, bone char, and buttons. Nothing was wasted except the buffalo itself [3].",
+      "text": "With the herds gone, a new industry rose: bone picking [3]. Settlers and Indigenous people gathered bleached skeletons from the prairie. The CPR shipped boxcars full of bones east to Regina (the \\\"Pile of Bones\\\"), Moose Jaw, and Medicine Hat [5]. Bones became fertilizer, bone char, and buttons. Nothing was wasted except the buffalo itself [3].",
       "citations": [
         { "id": 3, "source": "Isenberg, Andrew C. (2000). The Destruction of the Bison. Cambridge University Press." },
         { "id": 5, "source": "MacEwan, Grant. (1995). Buffalo: Sacred and Sacrificed. Edmonton." }
       ],
-      "image": "bison-skull-pile-edit-2.jpg",
+      "image": "bison-skull-pile-edit-2-opt.jpg",
       "alt": "Pile of bison skulls on the prairie, 1870s",
       "caption": "Gathering buffalo bones on the prairie. The skulls told the story the living no longer could.",
-      "atmosphericBg": "Bison_skull_pile_edit_2.jpg"
+      "atmosphericBg": "Bison_skull_pile_edit_2.webp"
     },
     {
       "year": 1883,
@@ -142,10 +142,10 @@
         { "id": 4, "source": "Calloway, Colin. (1996). Our Hearts Fell to the Ground. Bedford/St. Martin's." },
         { "id": 5, "source": "MacEwan, Grant. (1995). Buffalo: Sacred and Sacrificed. Edmonton." }
       ],
-      "image": "gull-lake-saskatchewan-1890-768x637.jpg",
+      "image": "gull-lake-saskatchewan-1890-768x637.webp",
       "alt": "Gull Lake, Saskatchewan, 1890 — bone trade era",
       "caption": "Gull Lake, Saskatchewan, 1890. Bone trade collection point on the CPR line.",
-      "atmosphericBg": "Bison_skull_pile_edit_2.jpg"
+      "atmosphericBg": "Bison_skull_pile_edit_2.webp"
     },
     {
       "year": 1889,
@@ -158,10 +158,10 @@
         { "id": 6, "source": "Hornaday, William Temple. (1889). The Extermination of the American Bison. Smithsonian Institution Annual Report." },
         { "id": 4, "source": "Calloway, Colin. (1996). Our Hearts Fell to the Ground. Bedford/St. Martin's." }
       ],
-      "image": "bison-skull-pile-edit-2.jpg",
+      "image": "bison-skull-pile-edit-2-opt.jpg",
       "alt": "Pile of bison skulls from the 1870s",
       "caption": "The skulls told the story the living no longer could.",
-      "atmosphericBg": "Bison_skull_pile_edit_2.jpg"
+      "atmosphericBg": "Bison_skull_pile_edit_2.webp"
     },
     {
       "year": 1900,
