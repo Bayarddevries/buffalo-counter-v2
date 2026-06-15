@@ -369,7 +369,7 @@ body {
 .card.active {
     opacity: 1;
     transform: scale(1);
-    background: var(--color-bg-card-active);
+    background: rgba(26, 26, 26, 0.85);
 }
 
 .card.card-end {
