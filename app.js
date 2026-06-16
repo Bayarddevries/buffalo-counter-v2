@@ -16,7 +16,8 @@
         promptHidden: false,
         cards: null,
         section: null,
-        atmoBg: null,
+        atmoBgCurrent: null,
+        atmoBgNext: null,
         timelineData: null,
         imageManifest: null
     };
@@ -247,11 +248,42 @@
     // ===================================
     // Atmospheric Background
     // ===================================
+    let atmoTransitioning = false;
     function setupAtmosphericBg(card) {
-        if (!state.atmoBg || !card) return;
+        if (!state.atmoBgCurrent || !state.atmoBgNext || !card) return;
         const bg = card.dataset.bg;
         if (!bg) return;
-        state.atmoBg.style.backgroundImage = `url(${bg})`;
+        
+        // If same image already showing, skip
+        const currentBg = state.atmoBgCurrent.style.backgroundImage;
+        if (currentBg && currentBg.includes(bg)) return;
+        
+        // Prevent overlapping transitions
+        if (atmoTransitioning) return;
+        atmoTransitioning = true;
+        
+        // Set next layer to new image (invisible, behind current)
+        state.atmoBgNext.style.backgroundImage = `url(${bg})`;
+        state.atmoBgNext.classList.remove('fade-in');
+        state.atmoBgCurrent.classList.remove('fade-out');
+        
+        // Force reflow to ensure initial state is applied
+        void state.atmoBgNext.offsetWidth;
+        
+        // Crossfade: fade in next, fade out current
+        state.atmoBgNext.classList.add('fade-in');
+        state.atmoBgCurrent.classList.add('fade-out');
+        
+        // After transition, swap layers
+        setTimeout(() => {
+            // Move current image to current layer
+            state.atmoBgCurrent.style.backgroundImage = `url(${bg})`;
+            // Reset classes
+            state.atmoBgCurrent.classList.remove('fade-out');
+            state.atmoBgNext.classList.remove('fade-in');
+            // Reset z-index and opacity via classes (handled by CSS)
+            atmoTransitioning = false;
+        }, 1200); // Match CSS transition duration
     }
     
     // ===================================
@@ -262,7 +294,8 @@
         if (!section) return;
         
         state.section = section;
-        state.atmoBg = document.getElementById('atmoBg');
+        state.atmoBgCurrent = document.getElementById('atmoBgCurrent');
+        state.atmoBgNext = document.getElementById('atmoBgNext');
         
         section.innerHTML = '';
         
