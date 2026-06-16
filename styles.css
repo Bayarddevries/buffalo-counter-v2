@@ -103,11 +103,7 @@ body {
     inset: 0;
     z-index: 0;
     pointer-events: none;
-    background: radial-gradient(
-        ellipse at center,
-        rgba(10, 10, 10, 0.2) 0%,
-        rgba(10, 10, 10, 0.85) 100%
-    );
+    background: rgba(10, 10, 10, 0.85);
 }
 
 /* ===================================
