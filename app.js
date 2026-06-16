@@ -635,6 +635,11 @@
             setupScroll();
             setupKeyboard();
 
+            // Initial atmospheric background
+            if (state.cards && state.cards.length > 0) {
+                setupAtmosphericBg(state.cards[0]);
+            }
+
             // Initial state
             const firstEvent = timeline.events[0];
             if (firstEvent) {
