@@ -400,6 +400,8 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     background: transparent;
+    position: relative;
+    z-index: 1;
 }
 
 .card.card-end {
