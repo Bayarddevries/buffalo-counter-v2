@@ -384,22 +384,6 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     background: transparent;
-}
-
-.card.active {
-}
-
-/* ===================================
-   Card base styles (all viewports)
-   =================================== */
-.card {
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    background: transparent;
     position: relative;
     z-index: 1;
 }
