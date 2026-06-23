@@ -14,7 +14,7 @@ Phase-tracked release addressing findings from `docs/audit-v2.md` (June 2026 aud
 - [x] **fix (B1)**: snap counter year to nearest event in `app.js` (audit B1)
 - [x] **fix (B2)**: remove duplicate `.card` rule in `styles.css` (audit B2)
 - [x] **content (B4,N1)**: annotate 1880 methodological rebound + tighten 1874 card body in `data/timeline.json` (audit B4 + N1)
-- [ ] **verify (B3)**: re-verify mobile card-opacity behaviour against `app.js` post-Issue #1 fix (commit 280dc27). Decision tree: fix or close as no-action.
+- [x] **verify (B3)**: re-verified mobile card-opacity behaviour against current source — closed as no-action (Issue #1 fix was removed in db0a0ed, replaced by fixed overlay dimming; mobile inactive dim is by design).
 
 **Deferred to Sprint 2 (gated on user choice):**
 - N2 — voice consistency (A: third-person reportage vs B: first-person plural)
