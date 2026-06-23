@@ -13,7 +13,7 @@ Phase-tracked release addressing findings from `docs/audit-v2.md` (June 2026 aud
 - [x] **docs**: add `docs/audit-v2.md` summary; refresh AGENTS.md to match shipped 11-event state; close stale Issue #1/#2 references
 - [x] **fix (B1)**: snap counter year to nearest event in `app.js` (audit B1)
 - [x] **fix (B2)**: remove duplicate `.card` rule in `styles.css` (audit B2)
-- [ ] **content (B4,N1)**: annotate 1880 methodological rebound + tighten 1874 card body in `data/timeline.json` (audit B4 + N1)
+- [x] **content (B4,N1)**: annotate 1880 methodological rebound + tighten 1874 card body in `data/timeline.json` (audit B4 + N1)
 - [ ] **verify (B3)**: re-verify mobile card-opacity behaviour against `app.js` post-Issue #1 fix (commit 280dc27). Decision tree: fix or close as no-action.
 
 **Deferred to Sprint 2 (gated on user choice):**
