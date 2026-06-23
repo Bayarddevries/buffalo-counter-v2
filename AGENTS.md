@@ -32,7 +32,7 @@ This file is the contract for any agent or contributor working on `buffalo-count
 │   ├── timeline.js
 │   └── toast.js
 ├── data/
-│   ├── timeline.json   # 14 events (1800-1900), 12 sources, citation markers
+│   ├── timeline.json   # 11 events (1800-1900), 12 sources, citation markers
 │   └── images.json     # 22 image manifests (alt, caption, credit, license, source_url)
 └── images/             # 19 content images + 6 atmospheric backgrounds
 ```
@@ -43,7 +43,7 @@ This file is the contract for any agent or contributor working on `buffalo-count
 - **No synthesized data** — every population number traces to a cited source in `timeline.json`.
 - **Citation standard**: Every event text uses `[n]` markers that map to `citations[]` array with `id` and `source`.
 - **Image sourcing**: All images from user's Bison folder (`C:\Users\Bayard deVries\Desktop\Bison\`). Metadata in `data/images.json` (file, alt, caption, credit, license, source_url).
-- **Atmospheric backgrounds**: Fixed full-screen images per card, crossfade on transition. Currently broken by opaque `.card.active` background (see Issue #1).
+- **Atmospheric backgrounds**: Fixed full-screen images per card, crossfade on transition. Issue #1 (`.card.active` opaque background hiding them) **fixed in commit 280dc27** (`z-index` reminder: cards above atmo-overlay for readable text).
 
 ## Commit Conventions
 ```
@@ -80,8 +80,10 @@ feat(sources): render credit/license/source-link below each image
 - Close issues via commit messages or `gh issue close <num>`
 
 ## Known Pitfalls
-- **Atmospheric backgrounds hidden**: `.card.active` has opaque `background: #1a1a1a` covering the fixed `z-index: -1` `.atmo-bg` layer. Fix: `background: rgba(26,26,26,0.85)` or remove entirely (vignette overlay handles readability). **Issue #1**
-- **Desktop scroll snap unreliable**: `scroll-snap-type: y proximity` creates dead zones between cards. Cards have `min-height: 100vh` + padding. Fix: switch to `mandatory` or adjust heights + add `scroll-padding`. **Issue #2**
+- **Atmospheric backgrounds (Issue #1)**: **FIXED in 280dc27** (`.card.active` background made semi-transparent; cards lifted above `.atmo-overlay` for readable text). Retain the pitfall note so future agents understand the historical failure mode.
+- **Desktop scroll snap (Issue #2)**: **FIXED in 2487236+** (`scroll-snap-type: y mandatory` removed dead zones). Retain the pitfall note for the same reason.
+- **Counter year interpolation (B1, audit 2026-06)**: `app.js:127-128` interpolates year between events. Counter displays non-existent years (e.g., 1826 between 1825→1850). Fix in v2.1 — see Open Bugs below.
+- **Duplicate `.card` CSS rule (B2, audit 2026-06)**: `styles.css:379` and `:395` declare the same selector twice; second wins. `chore` fix in v2.1.
 - **Single-file app.js only**: Do not edit `modules/` — they are not deployed. All changes go in `app.js`, `styles.css`, `index.html`, `data/`.
 - **GitHub Pages CDN cache**: After push, live site may need `?v=N` cache bust. Build script doesn't exist; manually increment version query param in `index.html` if needed.
 - **Local server port conflicts**: `python3 -m http.server` often fails with "Address already in use" in this environment. Test via live Pages URL instead.
@@ -118,3 +120,28 @@ feat(sources): render credit/license/source-link below each image
 - GitHub Pages deploys from `main` branch root
 - Repo: `bayarddevries/buffalo-counter-v2`
 - Live: `https://bayarddevries.github.io/buffalo-counter-v2/`
+
+---
+
+## Open Bugs (v2.1, audit 2026-06)
+
+Bug IDs from `docs/audit-v2.md`. Plan: `plans/buffalo-counter-v2.1-plan.md`.
+
+| ID | Severity | Status | Target | File / line |
+|---|---|---|---|---|
+| B1 — counter year interpolation | Critical | open | Sprint 1 · P1A | `app.js:127-128` |
+| B2 — duplicate `.card` CSS rule | Critical | open | Sprint 1 · P1B | `styles.css:379, 395` |
+| B4 — 1880 methodological rebound | Major | open | Sprint 1 · P2A | `data/timeline.json` (1880 event) |
+| N1 — 1874 card body too long | Major | open | Sprint 1 · P2B | `data/timeline.json` (1874 event) |
+| B3 — mobile opacity stack | Major | open · verify-only | Sprint 1 · P3A | `styles.css:534` (likely closes as no-action) |
+| N2 — voice inconsistency | Major | open · **user gate** | Sprint 2 · P4A | `data/timeline.json` (all events) |
+| N4 — citation drift | Minor | open · **user gate** | Sprint 2 · P4B | `data/timeline.json` (sources array) |
+| U1 — splash double-handler | Minor | open | Sprint 2 | `app.js:482-485` |
+| U2 — restart affordance | Minor | open | Sprint 2 | n/a (missing) |
+| U3 — modal gating scope | Minor | open | Sprint 2 | `app.js:588-597` |
+
+**Resolved during v2.1:**
+- B5 (audit): AGENTS.md doc rot — fixed in this Phase 0 (event count `14→11`; Issue #1/#2 references updated).
+- U4 (audit): `styles.css?v=30` cache-buster false-positive — closed in Phase 0 with explanation in CHANGELOG.
+
+For each entry, prefer fixing over inheriting; one commit per bug per convention above.

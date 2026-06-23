@@ -6,6 +6,28 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 
 ---
 
+## [Unreleased] v2.1 — Critical Bugfix Sprint
+
+Phase-tracked release addressing findings from `docs/audit-v2.md` (June 2026 audit). Bug IDs match that doc.
+
+- [P0] **docs**: add `docs/audit-v2.md` summary; refresh AGENTS.md to match shipped 11-event state; close stale Issue #1/#2 references
+- [ ] **fix (B1)**: snap counter year to nearest event in `app.js` (audit B1)
+- [ ] **fix (B2)**: remove duplicate `.card` rule in `styles.css` (audit B2)
+- [ ] **content (B4,N1)**: annotate 1880 methodological rebound + tighten 1874 card body in `data/timeline.json` (audit B4 + N1)
+- [ ] **verify (B3)**: re-verify mobile card-opacity behaviour against `app.js` post-Issue #1 fix (commit 280dc27). Decision tree: fix or close as no-action.
+
+**Deferred to Sprint 2 (gated on user choice):**
+- N2 — voice consistency (A: third-person reportage vs B: first-person plural)
+- N4 — citation drift on sources `[7]–[12]` (prune vs anchor)
+- U1 — splash double-handler (`transitionend` + `setTimeout` redundant)
+- U2 — restart/back-to-top affordance
+- U3 — keyboard nav modal gating
+
+**Closed in P0 (no fix needed):**
+- U4 — `styles.css?v=30` cache-buster: was incorrectly flagged in audit; AGENTS.md line 90 documents this is intentional GitHub Pages CDN cache control, not decorative.
+
+---
+
 ## [Unreleased]
 
 ### Fixed
