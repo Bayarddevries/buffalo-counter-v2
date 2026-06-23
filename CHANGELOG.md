@@ -10,8 +10,8 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 
 Phase-tracked release addressing findings from `docs/audit-v2.md` (June 2026 audit). Bug IDs match that doc.
 
-- [P0] **docs**: add `docs/audit-v2.md` summary; refresh AGENTS.md to match shipped 11-event state; close stale Issue #1/#2 references
-- [ ] **fix (B1)**: snap counter year to nearest event in `app.js` (audit B1)
+- [x] **docs**: add `docs/audit-v2.md` summary; refresh AGENTS.md to match shipped 11-event state; close stale Issue #1/#2 references
+- [x] **fix (B1)**: snap counter year to nearest event in `app.js` (audit B1)
 - [ ] **fix (B2)**: remove duplicate `.card` rule in `styles.css` (audit B2)
 - [ ] **content (B4,N1)**: annotate 1880 methodological rebound + tighten 1874 card body in `data/timeline.json` (audit B4 + N1)
 - [ ] **verify (B3)**: re-verify mobile card-opacity behaviour against `app.js` post-Issue #1 fix (commit 280dc27). Decision tree: fix or close as no-action.

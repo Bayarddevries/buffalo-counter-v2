@@ -416,41 +416,61 @@
         let targetLabel = '';
         let targetStatus = '';
         
+        // v2.1 (B1): counter year snaps to nearest known event — never displays invented fractional years.
+        // Population still interpolates freely via the activeCard's data-anchored range — see below.
+        function snapToNearestEventYear(y, events) {
+            if (!events || events.length === 0) return y;
+            let bestYear = events[0].year;
+            let bestDelta = Math.abs(y - bestYear);
+            for (let i = 1; i < events.length; i++) {
+                const d = Math.abs(y - events[i].year);
+                if (d < bestDelta) { bestDelta = d; bestYear = events[i].year; }
+            }
+            return bestYear;
+        }
+        // Interpolate population between the two bracketing events so the pop curve stays smooth.
+        // Year is snapped to the nearest event so we never display e.g. 1826 between 1825 and 1850.
         if (topCard && bottomCard) {
             const topYear = parseInt(topCard.dataset.year, 10);
             const bottomYear = parseInt(bottomCard.dataset.year, 10);
             const topRect = topCard.getBoundingClientRect();
             const botRect = bottomCard.getBoundingClientRect();
-            
+
             const topCenter = topRect.top + topRect.height / 2;
             const botCenter = botRect.top + botRect.height / 2;
             const range = botCenter - topCenter;
             const progress = range > 0 ? (viewportCenter - topCenter) / range : 0;
             const clampedProgress = Math.max(0, Math.min(1, progress));
-            
-            targetYear = Math.round(topYear + clampedProgress * (bottomYear - topYear));
+
+            const interpolatedYear = topYear + clampedProgress * (bottomYear - topYear);
+            // Pop points: look up the two bracketing events for population only.
+            const events = (state.timelineData && state.timelineData.events) || [];
+            const topEvent = events.find(e => e.year === topYear);
+            const botEvent = events.find(e => e.year === bottomYear);
+            if (topEvent && botEvent) {
+                targetPop = Math.round(topEvent.population + clampedProgress * (botEvent.population - topEvent.population));
+                targetLabel = clampedProgress < 0.5 ? topEvent.populationLabel : botEvent.populationLabel;
+                targetStatus = clampedProgress < 0.5 ? topEvent.status : botEvent.status;
+            }
+            // Year: snap to nearest event so counter never shows an invented year.
+            targetYear = snapToNearestEventYear(interpolatedYear, events);
             activeCard = clampedProgress < 0.5 ? topCard : bottomCard;
         } else if (topCard) {
-            targetYear = parseInt(topCard.dataset.year, 10);
+            const y = parseInt(topCard.dataset.year, 10);
+            targetYear = y;
+            const events = (state.timelineData && state.timelineData.events) || [];
+            const e = events.find(ev => ev.year === y);
+            if (e) { targetPop = e.population; targetLabel = e.populationLabel; targetStatus = e.status; }
             activeCard = topCard;
         } else if (bottomCard) {
-            targetYear = parseInt(bottomCard.dataset.year, 10);
+            const y = parseInt(bottomCard.dataset.year, 10);
+            targetYear = y;
+            const events = (state.timelineData && state.timelineData.events) || [];
+            const e = events.find(ev => ev.year === y);
+            if (e) { targetPop = e.population; targetLabel = e.populationLabel; targetStatus = e.status; }
             activeCard = bottomCard;
         }
-        
-        // Find matching event data
-        if (state.timelineData && state.timelineData.events) {
-            const event = state.timelineData.events.find(e => e.year === targetYear) 
-                || state.timelineData.events.reduce((prev, curr) => 
-                    Math.abs(curr.year - targetYear) < Math.abs(prev.year - targetYear) ? curr : prev);
-            
-            if (event) {
-                targetPop = event.population;
-                targetLabel = event.populationLabel;
-                targetStatus = event.status;
-            }
-        }
-        
+
         animateCounter(targetYear, targetPop, targetLabel, targetStatus);
         updateTimeline(targetYear);
         
