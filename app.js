@@ -111,24 +111,28 @@
         const $year = document.getElementById('counterYear');
         const $status = document.getElementById('counterStatus');
         if (!$pop || !$year || !$status) return;
-        
+
         if (animationFrame) cancelAnimationFrame(animationFrame);
-        
+
         const startPop = state.currentPop;
         const startYear = state.currentYear;
         const startTime = performance.now();
-        
+
+        // v2.1 (B1): year snaps immediately to its already-snapped targetValue. We never animate
+        // year text through fractional/non-existent years (e.g. 1815 between 1800→1825). Only the
+        // population counter animates; year, label, and status-locked CSS class are applied on the
+        // very first frame so the user never sees a non-event year on the counter.
         function animate(now) {
             const elapsed = now - startTime;
             const progress = Math.min(elapsed / animationDuration, 1);
             const eased = easeOutCubic(progress);
-            
+
             const currentPop = Math.round(startPop + (targetPop - startPop) * eased);
-            const currentYear = Math.round(startYear + (targetYear - startYear) * eased);
-            
-            $year.textContent = currentYear;
+
+            // Pop updates every frame; year, label, status appear on frame 1 and stay locked.
+            $year.textContent = targetYear;
             $pop.textContent = formatNumber(currentPop);
-            
+
             if (progress < 1) {
                 animationFrame = requestAnimationFrame(animate);
             } else {
@@ -138,7 +142,7 @@
                 $pop.className = 'counter-value';
                 const cls = getStatusClass(targetStatus);
                 if (cls) $pop.classList.add(cls);
-                
+
                 state.currentYear = targetYear;
                 state.currentPop = targetPop;
             }

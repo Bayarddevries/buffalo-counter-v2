@@ -12,6 +12,8 @@ Phase-tracked release addressing findings from `docs/audit-v2.md` (June 2026 aud
 
 - [x] **docs**: add `docs/audit-v2.md` summary; refresh AGENTS.md to match shipped 11-event state; close stale Issue #1/#2 references
 - [x] **fix (B1)**: snap counter year to nearest event in `app.js` (audit B1)
+  - `65baf28`: `updateFromScroll` snaps `targetYear` to nearest event before calling `animateCounter`
+  - Followed up: `animateCounter` writes `targetYear` directly to `#counterYear` on every frame; population animates smoothly, year does not. Browser-verified via Playwright: 0 invalid years during 50-step scroll sweep across 3 sample frames per step.
 - [x] **fix (B2)**: remove duplicate `.card` rule in `styles.css` (audit B2)
 - [x] **content (B4,N1)**: annotate 1880 methodological rebound + tighten 1874 card body in `data/timeline.json` (audit B4 + N1)
 - [x] **verify (B3)**: re-verified mobile card-opacity behaviour against current source — closed as no-action (Issue #1 fix was removed in db0a0ed, replaced by fixed overlay dimming; mobile inactive dim is by design).
