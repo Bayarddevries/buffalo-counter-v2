@@ -24,7 +24,7 @@ Phase-tracked release addressing findings from `docs/audit-v2.md` (June 2026 aud
 ## [Unreleased] v2.2 — Sprint 2: content consistency + UX polish
 
 - [x] **content (N2)**: normalise voice to third-person reportage across all 11 cards (audit N2; user picked Option A)
-- [ ] **content (N4)**: prune or anchor sources `[7]–[12]` (audit N4) — pending user choice
+- [x] **content (N4)**: anchor all 12 sources (no prunes needed — anchor strategy fits cleanly: Taylor→1850, Doback→1900, Geist→1825, Smits→1865, Phillips→1880, Congressional Globe→1870) (audit N4)
 - [ ] **fix (U1)**: drop redundant splash double-handler (audit U1)
 - [ ] **fix (U3)**: keyboard nav gates on "any modal open", not just sources (audit U3)
 - [ ] **feat (U2)**: add "Back to 1800" affordance after last card (audit U2)

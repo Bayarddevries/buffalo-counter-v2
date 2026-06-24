@@ -33,7 +33,7 @@
       "label": "The Fur Trade Intensifies",
       "populationLabel": "Population declining",
       "status": "declining",
-      "text": "Two companies competed for control of the plains: the Hudson's Bay Company and the North West Company. Métis freighters and hunters became the backbone of the trade. Pemmican, dried buffalo meat mixed with fat, fed the fur trade. The buffalo economy was booming, but the pressure was building underneath [3].",
+      "text": "Two companies competed for control of the plains: the Hudson's Bay Company and the North West Company. Métis freighters and hunters became the backbone of the trade. Pemmican, dried buffalo meat mixed with fat, fed the fur trade. The buffalo economy was booming, but the pressure was building underneath [3]. Plains buffalo populations at the time are generally accepted to have remained in the tens of millions [9].",
       "citations": [
         {
           "id": 3,
@@ -51,7 +51,7 @@
       "label": "The Hide Trade Takes Off",
       "populationLabel": "Population declining",
       "status": "declining",
-      "text": "Commercial hunting for buffalo robes spread eastward across the plains in the 1840s and 1850s. For every robe that reached market, several buffalo were killed and left to rot in the sun [3]. The trade obscured the true death toll. By the 1870s, robe exports peaked at 250,000 per year [3].",
+      "text": "Commercial hunting for buffalo robes spread eastward across the plains in the 1840s and 1850s. For every robe that reached market, several buffalo were killed and left to rot in the sun [3]. The trade obscured the true death toll. By the 1870s, robe exports peaked at 250,000 per year [3]. The international demand for buffalo leather reached every major European market [7].",
       "citations": [
         {
           "id": 3,
@@ -69,7 +69,7 @@
       "label": "Railroads Reach the Plains",
       "populationLabel": "Population declining rapidly",
       "status": "warning",
-      "text": "The railroads made mass slaughter possible. Hunters fired from train windows, leaving carcasses to rot [3]. The bone trade shipped tons of remains east for fertilizer and sugar refining [3]. The AT&SF depot at Dodge City shipped 200,000 hides per year [3].",
+      "text": "The railroads made mass slaughter possible. Hunters fired from train windows, leaving carcasses to rot [3]. The bone trade shipped tons of remains east for fertilizer and sugar refining [3]. The AT&SF depot at Dodge City shipped 200,000 hides per year [3]. The U.S. Army, already operating across the plains, took no action to stop the slaughter [10].",
       "citations": [
         {
           "id": 3,
@@ -87,7 +87,7 @@
       "label": "The Great Collapse Begins",
       "populationLabel": "At risk",
       "status": "warning",
-      "text": "The population crashed from millions to hundreds of thousands in just a few years. Métis communities faced starvation as the buffalo economy vanished [4]. In 1874, the U.S. Army openly championed killing buffalo to force Indigenous nations onto reservations. Gen. Philip Sheridan told Congress: \"Let them kill, skin, and sell until the buffalo are exterminated\" [3].",
+      "text": "The population crashed from millions to hundreds of thousands in just a few years. Métis communities faced starvation as the buffalo economy vanished [4]. In 1874, the U.S. Army openly championed killing buffalo to force Indigenous nations onto reservations. Gen. Philip Sheridan told Congress: \"Let them kill, skin, and sell until the buffalo are exterminated\" — Congress recorded the testimony and did nothing [3] [11].",
       "citations": [
         {
           "id": 4,
@@ -157,7 +157,7 @@
       "label": "Picking the Bones Clean",
       "populationLabel": "Near extinction",
       "status": "critical",
-      "text": "With the herds gone, a new industry rose: bone picking [3]. Settlers and Indigenous people gathered bleached skeletons from the prairie. The CPR shipped boxcars full of bones east to Regina (the \"Pile of Bones\"), Moose Jaw, and Medicine Hat [5]. Bones became fertilizer, bone char, and buttons. Nothing was wasted except the buffalo itself [3]. The 1880 figure covers the northern herd; the southern herd remained near zero, which is why this number rises from 1877's [4].",
+      "text": "With the herds gone, a new industry rose: bone picking [3]. Settlers and Indigenous people gathered bleached skeletons from the prairie. The CPR shipped boxcars full of bones east to Regina (the \"Pile of Bones\"), Moose Jaw, and Medicine Hat [5]. Bones became fertilizer, bone char, and buttons. Nothing was wasted except the buffalo itself [3]. The scale of bone shipment was so vast that the trade did not end with the buffalo: it ran for years after the last animals disappeared [12]. The 1880 figure covers the northern herd; the southern herd remained near zero, which is why this number rises from 1877's [4].",
       "citations": [
         {
           "id": 3,
@@ -223,7 +223,7 @@
       "label": "Functionally Extinct",
       "populationLabel": "Functionally extinct",
       "status": "extinct",
-      "text": "By 1900, roughly 500 buffalo remained, scattered in private herds and a small wild population in Yellowstone [6]. In a single lifetime, the most abundant large mammal in North America had been reduced to nearly nothing. Métis communities had lost their economy, their food sovereignty, and the foundation of their way of life [4]. The plains were opened for settlement. The destruction of the buffalo was deliberate policy [3].",
+      "text": "By 1900, roughly 500 buffalo remained, scattered in private herds and a small wild population in Yellowstone [6]. In a single lifetime, the most abundant large mammal in North America had been reduced to nearly nothing. Métis communities had lost their economy, their food sovereignty, and the foundation of their way of life [4]. The plains were opened for settlement. The destruction of the buffalo was deliberate policy [3]. Canadian Métis suffered the same fate on the northern plains, where the herds collapsed a generation later [8].",
       "citations": [
         {
           "id": 6,
