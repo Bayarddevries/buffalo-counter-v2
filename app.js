@@ -502,11 +502,15 @@
         if (!splash || !btn) return;
 
         btn.addEventListener('click', () => {
+            // v2.2 (U1): use only `transitionend` with `{ once: true }`. The redundant `setTimeout(600)`
+            // fallback from the original implementation could double-fire on slow browsers. The CSS
+            // transition fully completes within 600ms under all reduced-motion-off conditions, so
+            // `transitionend` is reliable. If accessibility needs ever force a no-transition state,
+            // re-introduce a fallback guarded the same way (parentNode check).
             splash.classList.add('hidden');
             splash.addEventListener('transitionend', () => {
                 if (splash.parentNode) splash.remove();
             }, { once: true });
-            setTimeout(() => { if (splash.parentNode) splash.remove(); }, 600);
         });
     }
 
@@ -609,15 +613,22 @@
     // ===================================
     // Keyboard Navigation
     // ===================================
+    function isAnyModalOpen() {
+        // v2.2 (U3): generic "any modal open?" check. Used by keyboard nav so that arrow keys
+        // gracefully skip when the user is reading any overlay (sources panel, splash if still
+        // present, future citation lightbox or share dialog). Add new modal selectors here as
+        // they're introduced.
+        const sourcesOpen = !document.getElementById('sourcesPanel')?.hasAttribute('hidden');
+        const splashOpen = !!document.getElementById('splash');
+        return sourcesOpen || splashOpen;
+    }
+
     function setupKeyboard() {
         document.addEventListener('keydown', (e) => {
-            const sourcesPanel = document.getElementById('sourcesPanel');
-            if (sourcesPanel && !sourcesPanel.hasAttribute('hidden')) return;
-            
-            if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
-                e.preventDefault();
-                scrollToNextCard(e.key === 'ArrowDown' ? 1 : -1);
-            }
+            if (e.key !== 'ArrowDown' && e.key !== 'ArrowUp') return;
+            if (isAnyModalOpen()) return;
+            e.preventDefault();
+            scrollToNextCard(e.key === 'ArrowDown' ? 1 : -1);
         });
     }
     

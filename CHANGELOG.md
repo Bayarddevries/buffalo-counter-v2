@@ -25,8 +25,8 @@ Phase-tracked release addressing findings from `docs/audit-v2.md` (June 2026 aud
 
 - [x] **content (N2)**: normalise voice to third-person reportage across all 11 cards (audit N2; user picked Option A)
 - [x] **content (N4)**: anchor all 12 sources (no prunes needed — anchor strategy fits cleanly: Taylor→1850, Doback→1900, Geist→1825, Smits→1865, Phillips→1880, Congressional Globe→1870) (audit N4)
-- [ ] **fix (U1)**: drop redundant splash double-handler (audit U1)
-- [ ] **fix (U3)**: keyboard nav gates on "any modal open", not just sources (audit U3)
+- [x] **fix (U1)**: drop redundant splash double-handler (audit U1)
+- [x] **fix (U3)**: keyboard nav gates on "any modal open" via generic `isAnyModalOpen()` helper — covers sources panel + splash + future modals (audit U3)
 - [ ] **feat (U2)**: add "Back to 1800" affordance after last card (audit U2)
 - [ ] **chore**: close out Sprint 2 with cache-buster bump for `app.js?v=2`
 
