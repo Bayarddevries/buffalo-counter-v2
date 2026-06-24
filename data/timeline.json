@@ -11,10 +11,16 @@
       "label": "A Vast Ocean of Buffalo",
       "populationLabel": "Population stable",
       "status": "stable",
-      "text": "Tens of millions of buffalo covered the plains from Alberta to Texas [1]. For the Métis, the buffalo was everything: food, clothing, shelter, trade goods. The hunt was communal, organized, and sustainable. It had been that way for generations [2].",
+      "text": "Tens of millions of buffalo covered the plains from Alberta to Texas [1]. The Métis drew on them for everything: food, clothing, shelter, trade goods. The hunt was communal, organized, and sustainable. It had been that way for generations [2].",
       "citations": [
-        { "id": 1, "source": "Flores, Dan. (2016). American Serengeti. University of Oklahoma Press." },
-        { "id": 2, "source": "Peterson, Jacqueline. (1985). Many Roads to Red River. Gabriel Dumont Institute." }
+        {
+          "id": 1,
+          "source": "Flores, Dan. (2016). American Serengeti. University of Oklahoma Press."
+        },
+        {
+          "id": 2,
+          "source": "Peterson, Jacqueline. (1985). Many Roads to Red River. Gabriel Dumont Institute."
+        }
       ],
       "image": "pc005127.jpg",
       "alt": "A herd of plains buffalo at Buffalo National Park, Wainwright, Alberta, early 1900s",
@@ -27,9 +33,12 @@
       "label": "The Fur Trade Intensifies",
       "populationLabel": "Population declining",
       "status": "declining",
-      "text": "The Hudson's Bay Company and North West Company competed for control of the plains. Métis freighters and hunters became the backbone of the trade. Pemmican — dried buffalo meat mixed with fat — fed the fur trade. The buffalo economy was booming, but the pressure was building [3].",
+      "text": "Two companies competed for control of the plains: the Hudson's Bay Company and the North West Company. Métis freighters and hunters became the backbone of the trade. Pemmican, dried buffalo meat mixed with fat, fed the fur trade. The buffalo economy was booming, but the pressure was building underneath [3].",
       "citations": [
-        { "id": 3, "source": "Isenberg, Andrew C. (2000). The Destruction of the Bison. Cambridge University Press." }
+        {
+          "id": 3,
+          "source": "Isenberg, Andrew C. (2000). The Destruction of the Bison. Cambridge University Press."
+        }
       ],
       "image": "e000009381.jpg",
       "alt": "Métis freighting brigade with Red River cart and canvas lodge on the open prairie",
@@ -42,9 +51,12 @@
       "label": "The Hide Trade Takes Off",
       "populationLabel": "Population declining",
       "status": "declining",
-      "text": "Commercial hunting for buffalo robes expanded east. For every robe that made it to market, several more buffalo were killed and left in the sun [3]. The trade obscured the true death toll. By the 1870s, the robe trade peaked at 250,000 per year [3].",
+      "text": "Commercial hunting for buffalo robes spread eastward across the plains in the 1840s and 1850s. For every robe that reached market, several buffalo were killed and left to rot in the sun [3]. The trade obscured the true death toll. By the 1870s, robe exports peaked at 250,000 per year [3].",
       "citations": [
-        { "id": 3, "source": "Isenberg, Andrew C. (2000). The Destruction of the Bison. Cambridge University Press." }
+        {
+          "id": 3,
+          "source": "Isenberg, Andrew C. (2000). The Destruction of the Bison. Cambridge University Press."
+        }
       ],
       "image": "2_hunters_standing_over_dead_buffalo__Scotty_Philips_herd_Fort_Pierre_SD_LCCN2006689761.jpg",
       "alt": "Hunters standing over dead buffalo, Scotty Philip's herd, Fort Pierre, South Dakota",
@@ -57,9 +69,12 @@
       "label": "Railroads Reach the Plains",
       "populationLabel": "Population declining rapidly",
       "status": "warning",
-      "text": "Railroads made mass slaughter possible. Hunters fired from train windows, leaving carcasses to rot [3]. The bone trade shipped tons of remains east for fertilizer and sugar refining [3]. The AT&SF depot at Dodge City shipped 200,000 hides per year [3].",
+      "text": "The railroads made mass slaughter possible. Hunters fired from train windows, leaving carcasses to rot [3]. The bone trade shipped tons of remains east for fertilizer and sugar refining [3]. The AT&SF depot at Dodge City shipped 200,000 hides per year [3].",
       "citations": [
-        { "id": 3, "source": "Isenberg, Andrew C. (2000). The Destruction of the Bison. Cambridge University Press." }
+        {
+          "id": 3,
+          "source": "Isenberg, Andrew C. (2000). The Destruction of the Bison. Cambridge University Press."
+        }
       ],
       "image": "6-4-768x572.jpg",
       "alt": "Canadian Pacific boxcar loaded with buffalo bones on the prairie",
@@ -72,10 +87,16 @@
       "label": "The Great Collapse Begins",
       "populationLabel": "At risk",
       "status": "warning",
-      "text": "The population crashed from millions to hundreds of thousands in just a few years. Métis communities faced starvation as the buffalo economy vanished [4]. In 1874, the U.S. Army openly championed killing buffalo to force Indigenous nations onto reservations. Gen. Philip Sheridan told Congress: \\\"Let them kill, skin, and sell until the buffalo are exterminated\\\" [3].",
+      "text": "The population crashed from millions to hundreds of thousands in just a few years. Métis communities faced starvation as the buffalo economy vanished [4]. In 1874, the U.S. Army openly championed killing buffalo to force Indigenous nations onto reservations. Gen. Philip Sheridan told Congress: \"Let them kill, skin, and sell until the buffalo are exterminated\" [3].",
       "citations": [
-        { "id": 4, "source": "Calloway, Colin. (1996). Our Hearts Fell to the Ground. Bedford/St. Martin's." },
-        { "id": 3, "source": "Isenberg, Andrew C. (2000). The Destruction of the Bison. Cambridge University Press." }
+        {
+          "id": 4,
+          "source": "Calloway, Colin. (1996). Our Hearts Fell to the Ground. Bedford/St. Martin's."
+        },
+        {
+          "id": 3,
+          "source": "Isenberg, Andrew C. (2000). The Destruction of the Bison. Cambridge University Press."
+        }
       ],
       "image": "bisonhides.jpg",
       "alt": "Rath & Wright's buffalo hide yard in 1878, showing 40,000 buffalo hides, Dodge City, Kansas",
@@ -90,9 +111,18 @@
       "status": "critical",
       "text": "In four years, hunters killed nearly three million buffalo on the southern plains alone [5]. Carcasses stretched for miles along the railroad lines; the new 1871 tanning process turned hides into industrial belting for Eastern factories [3]. General Sheridan told Congress: \"Let them kill, skin, and sell until the buffalo are exterminated\" — extermination was now U.S. policy [6]. The Métis watched their economy, their food, their world vanish in one winter.",
       "citations": [
-        { "id": 5, "source": "MacEwan, Grant. (1995). Buffalo: Sacred and Sacrificed. Edmonton." },
-        { "id": 3, "source": "Isenberg, Andrew C. (2000). The Destruction of the Bison. Cambridge University Press." },
-        { "id": 6, "source": "U.S. Congress. (1874). Congressional Globe, 43rd Congress. Sheridan testimony." }
+        {
+          "id": 5,
+          "source": "MacEwan, Grant. (1995). Buffalo: Sacred and Sacrificed. Edmonton."
+        },
+        {
+          "id": 3,
+          "source": "Isenberg, Andrew C. (2000). The Destruction of the Bison. Cambridge University Press."
+        },
+        {
+          "id": 6,
+          "source": "U.S. Congress. (1874). Congressional Globe, 43rd Congress. Sheridan testimony."
+        }
       ],
       "image": "buffalo-hunt-taylor-county-1874.jpg",
       "alt": "Buffalo hunt in Taylor County, 1874, from historical publication",
@@ -105,10 +135,16 @@
       "label": "The Hide Trade Collapses",
       "populationLabel": "Near extinction",
       "status": "critical",
-      "text": "The southern herd was destroyed in the early 1870s [4]. By 1877, I.G. Baker Co. marketed only 30,000 hides — down from 250,000 just three years prior [5]. The northern herd disappeared between 1876 and 1883 [4]. Treaty 7 was signed September 22, 1877; Elders recall the last buffalo vanished shortly after [4].",
+      "text": "The southern herd was destroyed in the early 1870s [4]. By 1877, I.G. Baker Co. marketed only 30,000 hides, down from 250,000 just three years prior [5]. The northern herd disappeared between 1876 and 1883 [4]. Treaty 7 was signed September 22, 1877; Elders recall the last buffalo vanished shortly after [4].",
       "citations": [
-        { "id": 5, "source": "MacEwan, Grant. (1995). Buffalo: Sacred and Sacrificed. Edmonton." },
-        { "id": 4, "source": "Calloway, Colin. (1996). Our Hearts Fell to the Ground. Bedford/St. Martin's." }
+        {
+          "id": 5,
+          "source": "MacEwan, Grant. (1995). Buffalo: Sacred and Sacrificed. Edmonton."
+        },
+        {
+          "id": 4,
+          "source": "Calloway, Colin. (1996). Our Hearts Fell to the Ground. Bedford/St. Martin's."
+        }
       ],
       "image": "8-man-buffalo-hunt-skinning-carcass.jpg",
       "alt": "Eight-man buffalo hunt skinning a carcass, 1870s",
@@ -123,8 +159,14 @@
       "status": "critical",
       "text": "With the herds gone, a new industry rose: bone picking [3]. Settlers and Indigenous people gathered bleached skeletons from the prairie. The CPR shipped boxcars full of bones east to Regina (the \"Pile of Bones\"), Moose Jaw, and Medicine Hat [5]. Bones became fertilizer, bone char, and buttons. Nothing was wasted except the buffalo itself [3]. The 1880 figure covers the northern herd; the southern herd remained near zero, which is why this number rises from 1877's [4].",
       "citations": [
-        { "id": 3, "source": "Isenberg, Andrew C. (2000). The Destruction of the Bison. Cambridge University Press." },
-        { "id": 5, "source": "MacEwan, Grant. (1995). Buffalo: Sacred and Sacrificed. Edmonton." }
+        {
+          "id": 3,
+          "source": "Isenberg, Andrew C. (2000). The Destruction of the Bison. Cambridge University Press."
+        },
+        {
+          "id": 5,
+          "source": "MacEwan, Grant. (1995). Buffalo: Sacred and Sacrificed. Edmonton."
+        }
       ],
       "image": "bison-skull-pile-edit-2-opt.jpg",
       "alt": "Pile of bison skulls on the prairie, 1870s",
@@ -139,8 +181,14 @@
       "status": "critical",
       "text": "The northern herd disappeared between 1876 and 1883 [4]. Peak years for the buffalo bone trade were 1891–1892, when train freight cars in constant use could not keep up with demand [5]. Hundreds of thousands of skeletons piled up along railway tracks awaiting shipment [5].",
       "citations": [
-        { "id": 4, "source": "Calloway, Colin. (1996). Our Hearts Fell to the Ground. Bedford/St. Martin's." },
-        { "id": 5, "source": "MacEwan, Grant. (1995). Buffalo: Sacred and Sacrificed. Edmonton." }
+        {
+          "id": 4,
+          "source": "Calloway, Colin. (1996). Our Hearts Fell to the Ground. Bedford/St. Martin's."
+        },
+        {
+          "id": 5,
+          "source": "MacEwan, Grant. (1995). Buffalo: Sacred and Sacrificed. Edmonton."
+        }
       ],
       "image": "gull-lake-saskatchewan-1890-768x637.webp",
       "alt": "Gull Lake, Saskatchewan, 1890 — bone trade era",
@@ -153,10 +201,16 @@
       "label": "The Last of the Herds",
       "populationLabel": "Functionally extinct",
       "status": "extinct",
-      "text": "William Temple Hornaday's 1889 Smithsonian report documented the final toll: fewer than 1,000 buffalo remained in the wild [6]. The species was functionally extinct. The Métis homeland was shattered. The plains were silent [4].",
+      "text": "William Temple Hornaday's 1889 Smithsonian report recorded the final count: fewer than 1,000 buffalo remained in the wild [6]. The species was functionally extinct. Métis communities faced starvation and displacement. The plains fell silent [4].",
       "citations": [
-        { "id": 6, "source": "Hornaday, William Temple. (1889). The Extermination of the American Bison. Smithsonian Institution Annual Report." },
-        { "id": 4, "source": "Calloway, Colin. (1996). Our Hearts Fell to the Ground. Bedford/St. Martin's." }
+        {
+          "id": 6,
+          "source": "Hornaday, William Temple. (1889). The Extermination of the American Bison. Smithsonian Institution Annual Report."
+        },
+        {
+          "id": 4,
+          "source": "Calloway, Colin. (1996). Our Hearts Fell to the Ground. Bedford/St. Martin's."
+        }
       ],
       "image": "bison-skull-pile-edit-2-opt.jpg",
       "alt": "Pile of bison skulls from the 1870s",
@@ -169,11 +223,20 @@
       "label": "Functionally Extinct",
       "populationLabel": "Functionally extinct",
       "status": "extinct",
-      "text": "By 1900, roughly 500 buffalo remained, scattered in private herds and a small wild population in Yellowstone [6]. In a single lifetime, the most abundant large mammal in North America had been reduced to nearly nothing. The Métis lost their economy, their food sovereignty, and the foundation of their way of life [4]. The plains were opened for settlement. The destruction was the point [3].",
+      "text": "By 1900, roughly 500 buffalo remained, scattered in private herds and a small wild population in Yellowstone [6]. In a single lifetime, the most abundant large mammal in North America had been reduced to nearly nothing. Métis communities had lost their economy, their food sovereignty, and the foundation of their way of life [4]. The plains were opened for settlement. The destruction of the buffalo was deliberate policy [3].",
       "citations": [
-        { "id": 6, "source": "Hornaday, William Temple. (1889). The Extermination of the American Bison. Smithsonian." },
-        { "id": 4, "source": "Calloway, Colin. (1996). Our Hearts Fell to the Ground. Bedford/St. Martin's." },
-        { "id": 3, "source": "Isenberg, Andrew C. (2000). The Destruction of the Bison. Cambridge University Press." }
+        {
+          "id": 6,
+          "source": "Hornaday, William Temple. (1889). The Extermination of the American Bison. Smithsonian."
+        },
+        {
+          "id": 4,
+          "source": "Calloway, Colin. (1996). Our Hearts Fell to the Ground. Bedford/St. Martin's."
+        },
+        {
+          "id": 3,
+          "source": "Isenberg, Andrew C. (2000). The Destruction of the Bison. Cambridge University Press."
+        }
       ],
       "image": "0_yz2umixkqbbzry69.webp",
       "alt": "Stack of buffalo skulls at railway siding, Saskatchewan, ca. 1890",
@@ -186,17 +249,53 @@
     }
   ],
   "sources": [
-    { "id": 1, "full": "Flores, Dan. (2016). American Serengeti. University of Oklahoma Press." },
-    { "id": 2, "full": "Peterson, Jacqueline. (1985). Many Roads to Red River. Gabriel Dumont Institute." },
-    { "id": 3, "full": "Isenberg, Andrew C. (2000). The Destruction of the Bison: An Environmental History, 1750–1920. Cambridge University Press." },
-    { "id": 4, "full": "Calloway, Colin. (1996). Our Hearts Fell to the Ground: Plains Indian Views of How the West Was Lost. Bedford/St. Martin's." },
-    { "id": 5, "full": "MacEwan, Grant. (1995). Buffalo: Sacred and Sacrificed. Edmonton: Alberta Sport, Recreation, Parks and Wildlife Foundation." },
-    { "id": 6, "full": "Hornaday, William Temple. (1889). \"The Extermination of the American Bison.\" Smithsonian Institution Annual Report." },
-    { "id": 7, "full": "Taylor, Scott. (2011). \"Buffalo Hunt: International Trade and the Virtual Extinction of the North American Bison.\" American Economic Review 101, no. 7: 3162–3195." },
-    { "id": 8, "full": "Doback, William. (2006). \"Killing the Canadian Buffalo, 1821–1881.\" In Canadian Environmental History: Essential Readings, ed. David Freeland Duke. Toronto: Canadian Scholars' Press." },
-    { "id": 9, "full": "Geist, Valerius. (1996). Buffalo Nation: History and Legend of the North American Bison. Stillwater: Voyageur Press." },
-    { "id": 10, "full": "Smits, David. (1994). \"The Frontier Army and the Destruction of the Buffalo: 1865–1883.\" Western Historical Quarterly 25, no. 3: 312–338." },
-    { "id": 11, "full": "U.S. Congress. (1874). Congressional Globe, 43rd Congress. Gen. Philip Sheridan testimony on buffalo destruction policy." },
-    { "id": 12, "full": "Phillips, Nancy. (2024). \"Skin and Bones: The Decimation of the Plains Buffalo.\" Mount Royal University Humanities Review, Vol. 5." }
+    {
+      "id": 1,
+      "full": "Flores, Dan. (2016). American Serengeti. University of Oklahoma Press."
+    },
+    {
+      "id": 2,
+      "full": "Peterson, Jacqueline. (1985). Many Roads to Red River. Gabriel Dumont Institute."
+    },
+    {
+      "id": 3,
+      "full": "Isenberg, Andrew C. (2000). The Destruction of the Bison: An Environmental History, 1750–1920. Cambridge University Press."
+    },
+    {
+      "id": 4,
+      "full": "Calloway, Colin. (1996). Our Hearts Fell to the Ground: Plains Indian Views of How the West Was Lost. Bedford/St. Martin's."
+    },
+    {
+      "id": 5,
+      "full": "MacEwan, Grant. (1995). Buffalo: Sacred and Sacrificed. Edmonton: Alberta Sport, Recreation, Parks and Wildlife Foundation."
+    },
+    {
+      "id": 6,
+      "full": "Hornaday, William Temple. (1889). \"The Extermination of the American Bison.\" Smithsonian Institution Annual Report."
+    },
+    {
+      "id": 7,
+      "full": "Taylor, Scott. (2011). \"Buffalo Hunt: International Trade and the Virtual Extinction of the North American Bison.\" American Economic Review 101, no. 7: 3162–3195."
+    },
+    {
+      "id": 8,
+      "full": "Doback, William. (2006). \"Killing the Canadian Buffalo, 1821–1881.\" In Canadian Environmental History: Essential Readings, ed. David Freeland Duke. Toronto: Canadian Scholars' Press."
+    },
+    {
+      "id": 9,
+      "full": "Geist, Valerius. (1996). Buffalo Nation: History and Legend of the North American Bison. Stillwater: Voyageur Press."
+    },
+    {
+      "id": 10,
+      "full": "Smits, David. (1994). \"The Frontier Army and the Destruction of the Buffalo: 1865–1883.\" Western Historical Quarterly 25, no. 3: 312–338."
+    },
+    {
+      "id": 11,
+      "full": "U.S. Congress. (1874). Congressional Globe, 43rd Congress. Gen. Philip Sheridan testimony on buffalo destruction policy."
+    },
+    {
+      "id": 12,
+      "full": "Phillips, Nancy. (2024). \"Skin and Bones: The Decimation of the Plains Buffalo.\" Mount Royal University Humanities Review, Vol. 5."
+    }
   ]
 }

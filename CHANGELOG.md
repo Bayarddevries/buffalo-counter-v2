@@ -19,12 +19,20 @@ Phase-tracked release addressing findings from `docs/audit-v2.md` (June 2026 aud
 - [x] **verify (B3)**: re-verified mobile card-opacity behaviour against current source — closed as no-action (Issue #1 fix was removed in db0a0ed, replaced by fixed overlay dimming; mobile inactive dim is by design).
 - [x] **chore (deploy)**: bump `<script src="app.js?v=1">` cache-buster in `index.html` — fixes CDN-stale-app.js issue flagged in AGENTS.md line 90. First `app.js` cache-keyed reference; bumps should continue with each code deploy.
 
-**Deferred to Sprint 2 (gated on user choice):**
-- N2 — voice consistency (A: third-person reportage vs B: first-person plural)
-- N4 — citation drift on sources `[7]–[12]` (prune vs anchor)
-- U1 — splash double-handler (`transitionend` + `setTimeout` redundant)
-- U2 — restart/back-to-top affordance
-- U3 — keyboard nav modal gating
+---
+
+## [Unreleased] v2.2 — Sprint 2: content consistency + UX polish
+
+- [x] **content (N2)**: normalise voice to third-person reportage across all 11 cards (audit N2; user picked Option A)
+- [ ] **content (N4)**: prune or anchor sources `[7]–[12]` (audit N4) — pending user choice
+- [ ] **fix (U1)**: drop redundant splash double-handler (audit U1)
+- [ ] **fix (U3)**: keyboard nav gates on "any modal open", not just sources (audit U3)
+- [ ] **feat (U2)**: add "Back to 1800" affordance after last card (audit U2)
+- [ ] **chore**: close out Sprint 2 with cache-buster bump for `app.js?v=2`
+
+**Sprint 1 (v2.1) — DONE.**
+
+Sprint 2 in progress (v2.2 block above). The previous "Deferred to Sprint 2" copy has been superseded by the v2.2 block.
 
 **Closed in P0 (no fix needed):**
 - U4 — `styles.css?v=30` cache-buster: was incorrectly flagged in audit; AGENTS.md line 90 documents this is intentional GitHub Pages CDN cache control, not decorative.
