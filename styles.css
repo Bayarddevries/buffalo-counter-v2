@@ -361,6 +361,71 @@ body {
 }
 
 /* ===================================
+   Restart Pill (v2.2, audit U2)
+   =================================== */
+.restart-pill {
+    position: fixed;
+    right: 18px;
+    bottom: 18px;
+    z-index: 70;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    border-radius: 999px;
+    border: 1px solid var(--color-border-active);
+    background: rgba(15, 15, 18, 0.78);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    color: var(--color-text-primary);
+    font-family: var(--font-body);
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity 0.3s ease, transform 0.3s ease, background var(--transition-fast);
+}
+
+.restart-pill[hidden] {
+    display: none;
+}
+
+.restart-pill:not([hidden]) {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.restart-pill:hover,
+.restart-pill:focus-visible {
+    background: rgba(196, 154, 58, 0.18);
+    border-color: var(--color-accent);
+    outline: none;
+}
+
+.restart-pill:focus-visible {
+    box-shadow: 0 0 0 2px var(--color-accent), 0 6px 18px rgba(0, 0, 0, 0.45);
+}
+
+.restart-glyph {
+    font-size: 1rem;
+    line-height: 1;
+}
+
+/* Mobile: shrink and tighten position above the sources toggle bar (~46px tall) */
+@media (max-width: 767px) {
+    .restart-pill {
+        right: 12px;
+        bottom: 64px;
+        padding: 8px 12px;
+        font-size: 0.72rem;
+    }
+}
+
+/* ===================================
    Cards Section — scroll snap
    =================================== */
 .cards-section {

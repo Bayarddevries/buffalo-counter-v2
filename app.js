@@ -491,6 +491,38 @@
                 state.promptHidden = true;
             }
         }
+
+        // v2.2 (U2): show the restart pill once we've moved past the first card; hide it again
+        // when the user scrolls back to top. Threshold matches card.height: scroll beyond one
+        // card height means they've engaged with the timeline.
+        const $pill = document.getElementById('restartPill');
+        if ($pill) {
+            const firstCard = state.cards && state.cards[0];
+            if (firstCard) {
+                const scrolled = (state.section.scrollTop || 0) > firstCard.offsetHeight * 0.6;
+                if (scrolled && $pill.hasAttribute('hidden')) {
+                    $pill.removeAttribute('hidden');
+                } else if (!scrolled && !$pill.hasAttribute('hidden')) {
+                    $pill.setAttribute('hidden', '');
+                }
+            }
+        }
+    }
+
+    // ===================================
+    // Restart Pill (v2.2, audit U2)
+    // ===================================
+    function setupRestart() {
+        const pill = document.getElementById('restartPill');
+        if (!pill) return;
+        pill.addEventListener('click', () => {
+            if (!state.section) return;
+            state.section.scrollTo({ top: 0, behavior: 'smooth' });
+            // Reset counter state so the year starts back at 1800 once the scroll lands.
+            // (Population will animate down to 30M via the existing updateFromScroll loop.)
+            state.currentYear = 1800;
+            state.currentPop = 30000000;
+        });
     }
     
     // ===================================
@@ -669,6 +701,7 @@
             setupCitationToast();
             setupScroll();
             setupKeyboard();
+            setupRestart();
 
             // Initial atmospheric background
             if (state.cards && state.cards.length > 0) {
