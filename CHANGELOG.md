@@ -28,7 +28,7 @@ Phase-tracked release addressing findings from `docs/audit-v2.md` (June 2026 aud
 - [x] **fix (U1)**: drop redundant splash double-handler (audit U1)
 - [x] **fix (U3)**: keyboard nav gates on "any modal open" via generic `isAnyModalOpen()` helper — covers sources panel + splash + future modals (audit U3)
 - [x] **feat (U2)**: floating "↺ Restart" pill in bottom-right corner — appears once user scrolls past 60% of the first card, smooth-scrolls cardsSection back to 0 on click, hidden when back at top; respects `prefers-reduced-motion` via the project's existing global rule (audit U2)
-- [ ] **chore**: close out Sprint 2 with cache-buster bump for `app.js?v=2`
+- [x] **chore (deploy)**: bump `<script src="app.js?v=2">` cache-buster in `index.html` — match v2.2 release.
 
 **Sprint 1 (v2.1) — DONE.**
 
