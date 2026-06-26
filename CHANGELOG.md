@@ -72,11 +72,13 @@ Sprint 2 in progress (v2.2 block above). The previous "Deferred to Sprint 2" cop
 
 ### Fixed
 - **Atmospheric overlay**: flat 85% black → radial gradient (center transparent, edges dark). Historical images now visible through the vignette
+- **Overlay dimming**: increased center vignette opacity from 0.2 → 0.45 so card text is readable against bright historical photos
 - **1870 card temporal fiction**: removed "In 1874, the U.S. Army..." from 1870 card; 1874 events stay on the 1874 card where they belong
 - **Splash double-remove**: removed redundant `setTimeout(600)` fallback — only `transitionend` handler remains (audit U1)
 
 ### Added
 - **Share button**: in footer — uses Web Share API on mobile, clipboard copy fallback on desktop
+- **Restart button (bottom)**: "↺ Start over" in the footer — hard page reload that resets scroll, counter, and splash state
 - **Scroll-position side dots**: gold dot rail on right side showing active card; hidden on mobile
 - **Favicon**: SVG bison silhouette on dark background, referenced from all pages
 - **Open Graph + Twitter Card meta tags**: rich link previews when shared to Telegram, Discord, Twitter, etc.

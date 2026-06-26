@@ -336,6 +336,19 @@
         });
         shareWrap.appendChild(shareBtn);
         footer.appendChild(shareWrap);
+
+        // Bottom restart button — full page reload to reset everything
+        const restartWrap = document.createElement('div');
+        restartWrap.className = 'footer-restart';
+        const restartBtn = document.createElement('button');
+        restartBtn.className = 'restart-bottom-btn';
+        restartBtn.innerHTML = '<span aria-hidden="true">↺</span> Start over';
+        restartBtn.addEventListener('click', () => {
+            window.location.reload();
+        });
+        restartWrap.appendChild(restartBtn);
+        footer.appendChild(restartWrap);
+        
         
         section.appendChild(footer);
         
