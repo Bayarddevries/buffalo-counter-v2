@@ -311,7 +311,32 @@
         // Footer
         const footer = document.createElement('div');
         footer.className = 'footer';
-        footer.innerHTML = 'Created by Bayard deVries · <a href="https://github.com/Bayarddevries/buffalo-counter" target="_blank" rel="noopener noreferrer">GitHub</a>';
+        footer.innerHTML = "Created by Bayard deVries · <a href='https://github.com/Bayarddevries/buffalo-counter' target='_blank' rel='noopener noreferrer'>GitHub</a>";
+
+        // Share button — Web Share API with clipboard fallback
+        const shareWrap = document.createElement('div');
+        shareWrap.className = 'footer-share';
+        const shareBtn = document.createElement('button');
+        shareBtn.className = 'share-btn';
+        shareBtn.innerHTML = '<span aria-hidden="true">↗</span> Share this';
+        shareBtn.addEventListener('click', async () => {
+            const url = window.location.href;
+            if (navigator.share) {
+                try {
+                    await navigator.share({ title: 'The Vanishing Buffalo', text: '30 million buffalo in 1800. Fewer than 500 by 1900.', url });
+                } catch {}
+            } else {
+                try {
+                    await navigator.clipboard.writeText(url);
+                    const orig = shareBtn.textContent;
+                    shareBtn.textContent = 'Copied!';
+                    setTimeout(() => { shareBtn.textContent = orig; }, 2000);
+                } catch {}
+            }
+        });
+        shareWrap.appendChild(shareBtn);
+        footer.appendChild(shareWrap);
+        
         section.appendChild(footer);
         
         // Buffer
@@ -321,6 +346,19 @@
         section.appendChild(buffer);
         
         state.cards = section.querySelectorAll('.card[data-year]');
+        
+        // Build scroll-position side dots
+        if (state.cards.length > 0) {
+            const dotsContainer = document.createElement('div');
+            dotsContainer.className = 'scroll-dots';
+            dotsContainer.setAttribute('aria-hidden', 'true');
+            state.cards.forEach((_, i) => {
+                const dot = document.createElement('span');
+                dot.className = 'scroll-dot' + (i === 0 ? ' active' : '');
+                dotsContainer.appendChild(dot);
+            });
+            document.body.appendChild(dotsContainer);
+        }
         
         if (state.cards.length > 0) {
             state.cards[0].classList.add('active');
@@ -482,6 +520,13 @@
         if (activeCard) {
             activeCard.classList.add('active');
             setupAtmosphericBg(activeCard);
+        }
+
+        // Update scroll-position side dots
+        const dots = document.querySelectorAll('.scroll-dot');
+        if (dots.length && activeCard) {
+            const activeIdx = Array.from(state.cards).indexOf(activeCard);
+            dots.forEach((d, i) => d.classList.toggle('active', i === activeIdx));
         }
         
         if (!state.promptHidden) {

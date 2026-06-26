@@ -103,7 +103,11 @@ body {
     inset: 0;
     z-index: 0;
     pointer-events: none;
-    background: rgba(10, 10, 10, 0.85);
+    background: radial-gradient(
+        ellipse at center,
+        rgba(10, 10, 10, 0.2) 0%,
+        rgba(10, 10, 10, 0.85) 100%
+    );
 }
 
 /* ===================================
@@ -755,6 +759,71 @@ body {
 .footer a {
     color: var(--color-accent);
     text-decoration: none;
+}
+
+/* ===================================
+   Share Button
+   =================================== */
+.footer-share {
+    margin-top: 1rem;
+}
+
+.share-btn {
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    padding: 8px 18px;
+    background: transparent;
+    border: 1px solid var(--color-border);
+    color: var(--color-text-secondary);
+    cursor: pointer;
+    border-radius: 999px;
+    transition: all var(--transition-fast);
+    letter-spacing: 0.05em;
+}
+
+.share-btn:hover {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+    background: rgba(196, 154, 58, 0.08);
+}
+
+/* ===================================
+   Scroll Position Dots
+   =================================== */
+.scroll-dots {
+    position: fixed;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 40;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    pointer-events: none;
+}
+
+.scroll-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--color-border);
+    transition: all var(--transition-base);
+    flex-shrink: 0;
+}
+
+.scroll-dot.active {
+    width: 8px;
+    height: 8px;
+    background: var(--color-accent);
+    box-shadow: 0 0 6px rgba(196, 154, 58, 0.4);
+}
+
+/* Hide dots on small screens (touch targets too small + cards snap firmly) */
+@media (max-width: 767px) {
+    .scroll-dots {
+        display: none;
+    }
 }
 
 /* ===================================

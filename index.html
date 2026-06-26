@@ -5,10 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="A visualization of the Great Buffalo Collapse, 1800-1900. Scroll to watch the buffalo population disappear.">
     <title>The Vanishing Buffalo — Scroll Edition</title>
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="The Vanishing Buffalo — A Scroll-Driven History">
+    <meta property="og:description" content="30 million buffalo in 1800. Fewer than 500 by 1900. Scroll through the collapse of the North American plains buffalo — every data point cited, every image sourced.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bayarddevries.github.io/buffalo-counter-v2/">
+    <meta property="og:image" content="https://bayarddevries.github.io/buffalo-counter-v2/images/bisonhides.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="The Vanishing Buffalo — A Scroll-Driven History">
+    <meta name="twitter:description" content="30 million buffalo in 1800. Fewer than 500 by 1900. Scroll through the collapse — every data point cited.">
+
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital,wght@0,400;1,400&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css?v=30">
+    <link rel="stylesheet" href="styles.css?v=31">
 </head>
 <body>
 
@@ -76,12 +92,6 @@
         Scroll to explore
     </div>
 
-    <!-- Restart Pill (v2.2, audit U2) — hidden until scrolled past first card -->
-    <button class="restart-pill" id="restartPill" type="button" aria-label="Restart from 1800" hidden>
-        <span class="restart-glyph" aria-hidden="true">↺</span>
-        <span class="restart-label">Restart</span>
-    </button>
-
     <!-- Cards (scroll-snap) -->
     <div class="cards-section" id="cardsSection">
         <!-- Cards injected by JS from timeline.json -->
@@ -98,7 +108,7 @@
         </div>
     </div>
 
-    <script src="app.js?v=2"></script>
+    <script src="app.js?v=3"></script>
 
 </body>
 </html>
