@@ -92,6 +92,12 @@
         Scroll to explore
     </div>
 
+    <!-- Restart Pill (v2.2, audit U2) — hidden until scrolled past first card -->
+    <button class="restart-pill" id="restartPill" type="button" aria-label="Restart from 1800" hidden>
+        <span class="restart-glyph" aria-hidden="true">↺</span>
+        <span class="restart-label">Restart</span>
+    </button>
+
     <!-- Cards (scroll-snap) -->
     <div class="cards-section" id="cardsSection">
         <!-- Cards injected by JS from timeline.json -->
